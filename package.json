@@ -1,6 +1,6 @@
 {
   "name": "@cfn-modules/lambda-event-source-dynamodb-stream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "DynamoDB stream event source for AWS Lambda function",
   "author": "Michael Wittig <michael@widdix.de>",
   "license": "Apache-2.0",

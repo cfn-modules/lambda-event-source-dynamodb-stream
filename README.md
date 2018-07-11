@@ -29,6 +29,7 @@ Resources:
         LambdaModule: !GetAtt 'Lambda.Outputs.StackName' # required
         TableModule: !GetAtt 'Table.Outputs.StackName' # required
         BatchSize: 10 # optional
+        StartingPosition: 'LATEST'
       TemplateURL: './node_modules/@cfn-modules/lambda-event-source-dynamodb-stream/module.yml'
 ```
 
@@ -65,6 +66,13 @@ Resources:
       <td>10</td>
       <td>no</td>
       <td>[1-10000]</td>
+    </tr>
+    <tr>
+      <td>StartingPosition</td>
+      <td>The position in the stream where Lambda starts reading</td>
+      <td>LATEST</td>
+      <td>no</td>
+      <td>[LATEST, TRIM_HORIZON]</td>
     </tr>
   </tbody>
 </table>

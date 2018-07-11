@@ -15,6 +15,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'cfn-modules: AWS Lambda event source: DynamoDB stream'
 # cfn-modules:implements()
+# TODO add alerting for IteratorAge
 Parameters:
   LambdaModule:
     Description: 'Stack name of lambda-function module.'
@@ -28,6 +29,11 @@ Parameters:
     Default: 10
     MinValue: 1
     MaxValue: 10000
+  StartingPosition:
+    Description: 'The position in the stream where Lambda starts reading.'
+    Type: String
+    Default: LATEST
+    AllowedValues: [LATEST, TRIM_HORIZON]
 Resources:
   Policy:
     Type: 'AWS::IAM::Policy'
@@ -61,10 +67,11 @@ Resources:
       Enabled: true
       EventSourceArn: {'Fn::ImportValue': !Sub '${TableModule}-StreamArn'}
       FunctionName: {'Fn::ImportValue': !Sub '${LambdaModule}-Arn'}
+      StartingPosition: !Ref StartingPosition
 Outputs:
   ModuleId:
     Value: 'lambda-event-source-dynamodb-stream'
   ModuleVersion:
-    Value: '0.0.1'
+    Value: '0.0.2'
   StackName:
     Value: !Ref 'AWS::StackName'

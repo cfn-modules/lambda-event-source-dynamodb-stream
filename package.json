@@ -1,0 +1,16 @@
+{
+  "name": "@cfn-modules/lambda-event-source-dynamodb-stream",
+  "version": "0.0.1",
+  "description": "DynamoDB stream event source for AWS Lambda function",
+  "author": "Michael Wittig <michael@widdix.de>",
+  "license": "Apache-2.0",
+  "keywords": ["cfn-modules"],
+  "homepage": "https://github.com/cfn-modules",
+  "bugs": {
+    "url": "https://github.com/cfn-modules/lambda-event-source-dynamodb-stream/issues"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/cfn-modules/lambda-event-source-dynamodb-stream.git"
+  }
+}

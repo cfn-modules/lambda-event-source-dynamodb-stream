@@ -54,11 +54,7 @@ Resources:
           Resource: {'Fn::ImportValue': !Sub '${TableModule}-StreamArn'}
         - Effect: Allow
           Action: 'dynamodb:ListStreams'
-          Resource: !Sub
-          - 'arn:aws:dynamodb:${Region}:${AccountId}:table/${TableName}/stream/*'
-          - Region: !Ref 'AWS::Region'
-            AccountId: !Ref 'AWS::AccountId'
-            TableName: {'Fn::ImportValue': !Sub '${TableModule}-Name'}
+          Resource: !Join ['', [{'Fn::ImportValue': !Sub '${TableModule}-Arn'}, '/stream/*']]
   EventSourceMapping:
     DependsOn: Policy
     Type: 'AWS::Lambda::EventSourceMapping'
@@ -72,6 +68,6 @@ Outputs:
   ModuleId:
     Value: 'lambda-event-source-dynamodb-stream'
   ModuleVersion:
-    Value: '0.0.2'
+    Value: '0.0.3'
   StackName:
     Value: !Ref 'AWS::StackName'

@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "dependencies": {
+    "eslint": "5.1.0",
+    "ava": "0.25.0",
+    "@cfn-modules/test": "^0.1.2",
+    "@cfn-modules/lambda-event-source-dynamodb-stream": "file:../",
+    "@cfn-modules/lambda-function": "^0.0.20",
+    "@cfn-modules/dynamodb-table": "^0.0.7"
+  },
+  "scripts": {
+    "test": "eslint . && ava -c 4 *.js"
+  }
+}

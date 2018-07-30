@@ -26,10 +26,10 @@ Resources:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
       Parameters:
-        LambdaModule: !GetAtt 'Lambda.Outputs.StackName' # required
+        LambdaModule: !GetAtt 'Function.Outputs.StackName' # required
         TableModule: !GetAtt 'Table.Outputs.StackName' # required
-        BatchSize: 10 # optional
-        StartingPosition: 'LATEST'
+        BatchSize: '10' # optional
+        StartingPosition: LATEST # optional
       TemplateURL: './node_modules/@cfn-modules/lambda-event-source-dynamodb-stream/module.yml'
 ```
 

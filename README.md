@@ -62,7 +62,7 @@ Resources:
     </tr>
     <tr>
       <td>BatchSize</td>
-      <td>The largest number of messages that Lambda retrieves from your queue at once.</td>
+      <td>The largest number of messages that Lambda retrieves from your stream at once.</td>
       <td>10</td>
       <td>no</td>
       <td>[1-10000]</td>

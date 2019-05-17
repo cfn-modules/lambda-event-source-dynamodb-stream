@@ -39,6 +39,7 @@ none
 
 ## Related modules
 
+* [dynamodb-table](https://github.com/cfn-modules/dynamodb-table)
 * [lambda-function](https://github.com/cfn-modules/lambda-function)
 
 ## Parameters

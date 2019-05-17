@@ -33,6 +33,14 @@ Resources:
       TemplateURL: './node_modules/@cfn-modules/lambda-event-source-dynamodb-stream/module.yml'
 ```
 
+## Examples
+
+none
+
+## Related modules
+
+* [lambda-function](https://github.com/cfn-modules/lambda-function)
+
 ## Parameters
 
 <table>

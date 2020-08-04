@@ -64,7 +64,7 @@ none
     </tr>
     <tr>
       <td>TableModule</td>
-      <td>Stack name of <a href="https://www.npmjs.com/package/@cfn-modules/dynamodb-table">dynamodb-table module</a> module (with StreamViewType != DISABLED)</td>
+      <td>Stack name of <a href="https://www.npmjs.com/package/@cfn-modules/dynamodb-table">dynamodb-table module</a> (with StreamViewType != DISABLED)</td>
       <td></td>
       <td>yes</td>
       <td></td>

@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/cfn-modules/lambda-event-source-dynamodb-stream.svg?branch=master)](https://travis-ci.org/cfn-modules/lambda-event-source-dynamodb-stream)
-[![NPM version](https://img.shields.io/npm/v/@cfn-modules/lambda-event-source-dynamodb-stream.svg)](https://www.npmjs.com/package/@cfn-modules/lambda-event-source-dynamodb-stream)
-
 # cfn-modules: AWS Lambda event source: DynamoDB stream
 
 DynamoDB stream event source for AWS Lambda function.
